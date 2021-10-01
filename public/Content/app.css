@@ -34,6 +34,7 @@ input, textarea{
 fieldset{
     border-radius:10px;
     color:gray;
+    margin:10px;
 }
 legend{
     border-radius:5px;

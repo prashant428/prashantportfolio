@@ -1,9 +1,22 @@
 <%- include partials/header.ejs %>
 <%- include partials/main_nav.ejs %>
-<form id="form" novalidate="novalidate">
+
+<main class="container-fluid">
+  <div class="bg-light p-5 rounded-lg m-3" style="width:400px; float: right">
+    <div class="panel panel-default">
+      <div class="panel-body">
+          <p>Contact me at:</p>
+          <p>210-2354 Eglinton Ave East</p>
+          <p>Scarborough ON</p>
+          <p>437-214-6959</p>
+          <p>prashants428@yahoo.com</p>
+      </div>
+    </div>
+</div>
+<form id="form" action='/' method='GET'>
   <div id="errorDiv"></div>
   <fieldset class="boxShadowStyle">
-  <legend class="boxShadowStyle">Send Message</legend>
+  <legend class="boxShadowStyle">&nbsp;Send Message</legend>
   <h2>Please complete all the fields below</h2>
 
   <label for "fname">First Name:</label>
@@ -15,11 +28,12 @@
   <label for "city">Email:</label>
   <input id="city" type="email"><br>
   <label for "message">Message:</label>
-  <textarea id="message" type="textarea" rows=5></textarea>
+  <textarea id="message" type="textarea" rows=5 class="boxShadowStyle"></textarea>
   </fieldset>
-  <input id="register" type="submit" value="Send" class="boxShadowStyle">
+  <input id="send" type="submit" value="Send" class="boxShadowStyle">
   <input id="clear" type="reset" value="Clear" class="boxShadowStyle">
 </form>
+</main>
 
 <% include partials/bottom_nav.ejs %>
 <% include partials/footer.ejs %>
