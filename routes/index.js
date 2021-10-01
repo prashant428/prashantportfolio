@@ -4,33 +4,27 @@ var router = express.Router();
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', 
-  { title: 'Home',
-    h1 : 'Heading'});
+  { title: 'Home'});
 });
 router.get('/home', function(req, res, next) {
   res.render('index', 
-  { title: 'Home',
-    h1 : 'Heading'});
+  { title: 'Home'});
 });
 router.get('/about', function(req, res, next) {
   res.render('index', 
-  { title: 'About',
-    h1 : 'Heading'});
+  { title: 'About'});
 });
 router.get('/products', function(req, res, next) {
   res.render('index', 
-  { title: 'Products',
-    h1 : 'Heading'});
+  { title: 'Products'});
 });
 router.get('/services', function(req, res, next) {
   res.render('index', 
-  { title: 'Services',
-    h1 : 'Heading'});
+  { title: 'Services'});
 });
 router.get('/contact', function(req, res, next) {
-  res.render('index', 
-  { title: 'Contact',
-    h1 : 'Heading'});
+  res.render('contact', 
+  { title: 'Contact'});
 });
 
 module.exports = router;

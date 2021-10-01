@@ -1,0 +1,25 @@
+<%- include partials/header.ejs %>
+<%- include partials/main_nav.ejs %>
+<form id="form" novalidate="novalidate">
+  <div id="errorDiv"></div>
+  <fieldset class="boxShadowStyle">
+  <legend class="boxShadowStyle">Send Message</legend>
+  <h2>Please complete all the fields below</h2>
+
+  <label for "fname">First Name:</label>
+  <input id="fname" type="text" ><br>
+  <label for "lname">Last Name:</label>
+  <input id="lname" type="text"><br>
+  <label for "addr">Telephone:</label>
+  <input id="addr" type="tel"><br>
+  <label for "city">Email:</label>
+  <input id="city" type="email"><br>
+  <label for "message">Message:</label>
+  <textarea id="message" type="textarea" rows=5></textarea>
+  </fieldset>
+  <input id="register" type="submit" value="Send" class="boxShadowStyle">
+  <input id="clear" type="reset" value="Clear" class="boxShadowStyle">
+</form>
+
+<% include partials/bottom_nav.ejs %>
+<% include partials/footer.ejs %>
