@@ -2,21 +2,8 @@
 #logo{
     height: 70px;
 }
-header {
-margin: 10px;
-box-shadow: 3px 3px 3px 3px gray;
-border-radius: 6px;
-color: white;
-padding: .5em 0 .5em 5.5em;
-height: 150px;
-background-image: url('Toronto-Skyline-banner-1024x218.jpg');
-text-transform: capitalize;
-font-variant: small-caps;
-font-weight: bold;
-font-family: "Times New Roman", Times, serif;
-font-size:60px;
-position:relative;
-}
+
+
 label, input, textarea{
     line-height:1.2em;
     margin:10px;
@@ -49,4 +36,24 @@ form{
 }
 .boxShadowStyle{
     box-shadow: 3px 3px 3px 3px gray;
+}
+.description {
+	overflow: auto;
+	height: 200px;
+	padding: 10px;
+	margin: 10px;
+     background-color: white;
+	color: gray;
+	border-radius: 10px;
+	opacity: 0.9;
+	line-height:2;	
+	
+}
+.description img{
+float:right;
+margin-left:6px;
+}
+
+.description a:hover img{
+	transform: scale(1.2);
 }
