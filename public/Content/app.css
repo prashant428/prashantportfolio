@@ -10,6 +10,8 @@ Date: Oct 2, 2021
     height: 70px;
 }
 
+/*Form styles*/
+
 label, input, textarea{
     line-height:1.2em;
     margin:10px;
@@ -43,6 +45,8 @@ form{
 .boxShadowStyle{
     box-shadow: 3px 3px 3px 3px gray;
 }
+
+/*Description box styles*/
 .description {
 	overflow: auto;
 	height: 200px;
@@ -60,6 +64,6 @@ float:right;
 margin-left:6px;
 }
 
-.description a:hover img{
+.description a:hover img{  /*To enlarge the picture when the mouse  hovers over it*/
 	transform: scale(1.2);
 }
