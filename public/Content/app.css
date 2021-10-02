@@ -1,8 +1,14 @@
+/*
+Filename: /Content/app.css
+Student Name: Prashant Sharma
+Student ID: 301175737
+Date: Oct 2, 2021
+*/
+
 /*Custom Css goes here*/
 #logo{
     height: 70px;
 }
-
 
 label, input, textarea{
     line-height:1.2em;
