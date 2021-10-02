@@ -10,29 +10,29 @@
           <p>Scarborough ON</p>
           <p>437-214-6959</p>
           <p>prashants428@yahoo.com</p>
+        </div>
       </div>
     </div>
-</div>
-<form id="form" action='/' method='GET'>
-  <div id="errorDiv"></div>
-  <fieldset>
-  <legend>&nbsp;Send Message</legend>
-  <h2>&nbsp;Please complete all the fields below</h2>
+  </div>
 
-  <label for "fname">First Name:</label>
-  <input id="fname" type="text" ><br>
-  <label for "lname">Last Name:</label>
-  <input id="lname" type="text"><br>
-  <label for "addr">Telephone:</label>
-  <input id="addr" type="tel"><br>
-  <label for "city">Email:</label>
-  <input id="city" type="email"><br>
-  <label for "message">Message:</label>
-  <textarea id="message" type="textarea" rows=5></textarea>
-  </fieldset>
-  <input id="send" type="submit" value="Send" class="boxShadowStyle">
-  <input id="clear" type="reset" value="Clear" class="boxShadowStyle">
-</form>
+  <form id="form" action='/' method='GET'>
+    <fieldset>
+      <legend>&nbsp;Send Message</legend>
+      <h2>&nbsp;Please complete all the fields below</h2>
+      <label for "fname">First Name:</label>
+      <input id="fname" type="text" ><br>
+      <label for "lname">Last Name:</label>
+      <input id="lname" type="text"><br>
+      <label for "addr">Telephone:</label>
+      <input id="addr" type="tel"><br>
+      <label for "city">Email:</label>
+      <input id="city" type="email"><br>
+      <label for "message">Message:</label>
+      <textarea id="message" type="textarea" rows=5></textarea>
+    </fieldset>
+    <input id="send" type="submit" value="Send" class="boxShadowStyle">
+    <input id="clear" type="reset" value="Clear" class="boxShadowStyle">
+  </form>
 </main>
 
 <% include partials/bottom_nav.ejs %>
