@@ -19,6 +19,7 @@
     "git": "^0.1.5",
     "http-errors": "~1.6.3",
     "jquery": "^3.6.0",
+    "mongoose": "^6.0.10",
     "morgan": "^1.9.1",
     "node": "^16.10.0",
     "npm-git-install": "^0.3.0",
