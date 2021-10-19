@@ -14,7 +14,7 @@ Date: Oct 2, 2021
             if(!confirm("Are you sure?"))
             {
                 event.preventDefault();
-                window.location.assign('/book_list');
+                //window.location.assign('/book_list');
             }
         });
     }

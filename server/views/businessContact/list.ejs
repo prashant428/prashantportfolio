@@ -1,0 +1,45 @@
+<% include ../partials/header.ejs %>
+
+<% include ../partials/main_nav.ejs %>
+
+<!--Main Content-->
+
+<main class="container">
+    <div class="row">
+        <div class="offset-mi-1 col-mi-10">
+            <h1><%=title%></h1>
+            
+            <table class="table table-bordered table striped table-hover">
+                <tr class="d-flex">
+                        <th class="text-center col-2">Name</th>
+                        <th class="text-center col-2">Telephone</th>
+                        <th class="text-center col-4">Email</th>
+                        <th class="text-center col-2"></th>
+                        <th class="text-center col-2"></th>
+                </tr>
+                <!--Repeatable Template Row-->
+                <% for (let count=0; count < ContactList.length; count++) { %>
+                    <tr class="d-flex">
+
+                        <td class="text-center col-2"><%= ContactList[count].name %></td>
+                        <td class="text-center col-2"><%= ContactList[count].number %></td>
+                        <td class="text-center col-4"><%= ContactList[count].email %></td>
+                
+                        <td class="text-center col-2">
+                            <a href="/businessContact/update/<%= ContactList[count]._id %>" class="btn btn-primary btn-sm">
+                            <i class="fas fa-pencil-alt"></i>Update</a>
+                        </td>
+                        <td class="text-center col-2">
+                            <a href="/businessContact/delete/<%= ContactList[count]._id %>" class="btn btn-danger btn-sm">
+                            <i class="fas fa-trash-alt"></i>Delete</a>
+                        </td>
+                    </tr>
+             <%}%>                   
+            </table>
+        </div>
+    </div>
+</main>
+
+
+<% include ../partials/bottom_nav.ejs %>
+<% include ../partials/footer.ejs %>
