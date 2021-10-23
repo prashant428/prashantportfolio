@@ -1,3 +1,10 @@
+/*
+Filename: users.js
+Student Name: Prashant Sharma
+Student ID: 301175737
+Date: Oct 23, 2021
+*/
+
 //require modules for the User model
 
 let mongoose=require('mongoose');

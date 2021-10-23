@@ -38,6 +38,7 @@ mongoDB.once('open', ()=>{
   console.log('Connected to MongoDB...');
 });
 
+//set up routers
 let indexRouter = require('../routes/index');
 let usersRouter = require('../routes/users');
 let booksRouter=require('../routes/book');
@@ -86,7 +87,7 @@ passport.use(User.createStrategy());
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
-let jwtOptions={};
+/*let jwtOptions={};
 jwtOptions.jwtFromRequest=ExtractJWT.fromAuthHeaderAsBearerToken;
 jwtOptions.secretOrKey=DB.Secret;
 

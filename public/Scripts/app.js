@@ -5,6 +5,7 @@ Student ID: 301175737
 Date: Oct 2, 2021
 */
 
+//Confirming delete and deleting an entry
 (()=>{function Start(){
     console.log("App started...")
     let deleteButtons= document.querySelectorAll('.btn-danger');

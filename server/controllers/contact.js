@@ -1,12 +1,18 @@
+/*
+Filename: contact.js
+Student Name: Prashant Sharma
+Student ID: 301175737
+Date: Oct 23, 2021
+*/
+
 let express=require('express');
 let router=express.Router();
 let mongoose=require('mongoose');
 
-let jwt=require('jsonwebtoken')
-
 //crate a reference to the model
 let Contact=require('../models/contact');
 
+//Sorting and displaying the contact list by name in an ascending order
 module.exports.displayContactList= (req, res, next) => {
     Contact.find().sort({"name":1}).exec((err, contactList) =>{
         if(err){
@@ -22,7 +28,7 @@ module.exports.displayContactList= (req, res, next) => {
     });
 }
 
-
+//Displaying the update page
 module.exports.displayUpdatePage=(req, res, next)=>{
     let id=req.params.id;
 
@@ -40,6 +46,7 @@ module.exports.displayUpdatePage=(req, res, next)=>{
     });
 }
 
+//Processing the Update page
 module.exports.processUpdatePage=(req, res, next)=>{
     let id=req.params.id
 
@@ -56,12 +63,13 @@ module.exports.processUpdatePage=(req, res, next)=>{
              res.end(err);
         }
         else{
-            //refresh the book list
+            //refresh the contact list
             res.redirect('/businessContact');
         }
     });
 }
 
+//Deleting selected contact by Id
 module.exports.performDelete=(req, res, next)=>{
     let id=req.params.id;
 
@@ -71,7 +79,7 @@ module.exports.performDelete=(req, res, next)=>{
             res.end(err);
         }
         else{
-            //refresh the book list
+            //refresh the contact list
             res.redirect('/businessContact');
         }
     });

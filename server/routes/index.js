@@ -15,8 +15,8 @@ router.get('/contact', indexController.displayContactPage);
 router.get('/login', indexController.displayLoginPage);
 router.post('/login', indexController.processLoginPage);
 
-router.get('/register', indexController.displayRegisterPage);
-router.post('/register', indexController.processRegisterPage)
+//router.get('/register', indexController.displayRegisterPage);
+//router.post('/register', indexController.processRegisterPage)
 
 
 /*GET to perform logout */

@@ -8,7 +8,7 @@
     <div class="row">
         <div class="offset-mi-1 col-mi-10">
             <h1><%=title%></h1>
-            
+            <!--Headers for Name, Telephone, Email-->
             <table class="table table-bordered table striped table-hover">
                 <tr class="d-flex">
                         <th class="text-center col-2">Name</th>
@@ -17,7 +17,7 @@
                         <th class="text-center col-2"></th>
                         <th class="text-center col-2"></th>
                 </tr>
-                <!--Repeatable Template Row-->
+                <!--Repeatable Template Row Including Update and Delete Buttons-->
                 <% for (let count=0; count < ContactList.length; count++) { %>
                     <tr class="d-flex">
 
@@ -27,11 +27,11 @@
                 
                         <td class="text-center col-2">
                             <a href="/businessContact/update/<%= ContactList[count]._id %>" class="btn btn-primary btn-sm">
-                            <i class="fas fa-pencil-alt"></i>Update</a>
+                            <i class="fas fa-pencil-alt"></i>Update</a> <!--Takes user to the Update page of the given Id-->
                         </td>
                         <td class="text-center col-2">
                             <a href="/businessContact/delete/<%= ContactList[count]._id %>" class="btn btn-danger btn-sm">
-                            <i class="fas fa-trash-alt"></i>Delete</a>
+                            <i class="fas fa-trash-alt"></i>Delete</a><!--Deletes contact by the given Id-->
                         </td>
                     </tr>
              <%}%>                   

@@ -1,3 +1,10 @@
+/*
+Filename: index.js
+Student Name: Prashant Sharma
+Student ID: 301175737
+Date: Oct 23, 2021
+*/
+
 let express=require('express');
 let router=express.Router();
 let mongoose=require("mongoose");
@@ -58,7 +65,7 @@ module.exports.displayLoginPage=(req, res, next)=>{
 }
 
 module.exports.processLoginPage= (req, res, next)=>{
-    passport.authenticate('local',
+    passport.authenticate('local', //authenticating the user
         (err, user, info)=>{
         //server err
         if(err)
@@ -70,14 +77,14 @@ module.exports.processLoginPage= (req, res, next)=>{
             req.flash("loginMessage", "Authentication error");
             return res.redirect('./login');
         }
-        req.login(user, (err)=>{
+        req.login(user, (err)=>{ //logging the user in
             //server error?
             if(err)
             {
                 return next(err);
             }
 
-            const payload={
+           /* const payload={
                 id: user._id,
                 displayName:user.displayName,
                 username:user.username,
@@ -99,7 +106,7 @@ module.exports.processLoginPage= (req, res, next)=>{
         });
     }) (req, res, next);
 }
-module.exports.displayRegisterPage=(req, res, next)=>{
+/*module.exports.displayRegisterPage=(req, res, next)=>{ //Displaying the register page
     //check if the user is not already logged in
     if(!req.user){
         res.render('auth/register', {
@@ -113,7 +120,7 @@ module.exports.displayRegisterPage=(req, res, next)=>{
     }
 }
 
-module.exports.processRegisterPage=(req, res, next)=>{
+module.exports.processRegisterPage=(req, res, next)=>{ //Registering the user
     let newUser=new User({
         username:req.body.username,
         email: req.body.email,
@@ -137,17 +144,17 @@ module.exports.processRegisterPage=(req, res, next)=>{
             })
         }
         else{
-            /*if no error exists and registration is successful redirect the user
-            and authenticate them */
+            //if no error exists and registration is successful redirect the user
+            //and authenticate them 
           //  res.json({success:true, msg: "User registered successfully!"}); //Getting Ready for API
             return passport.authenticate('local')(req, res, ()=>{
                 res.redirect('/businessContact')
             })
         }
     })
-}
+}*/
 
-module.exports.performLogout=(req, res, next) =>
+module.exports.performLogout=(req, res, next) => //logging the user out
 {
     req.logout();
     res.redirect('/');

@@ -1,3 +1,12 @@
+
+/*
+Filename: db.js
+Student Name: Prashant Sharma
+Student ID: 301175737
+Date: Oct 23, 2021
+*/
+
+//connecting the mongodb cloud database
 module.exports =
 {
     
