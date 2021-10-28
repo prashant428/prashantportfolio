@@ -34,7 +34,6 @@
     "popper.js": "^1.16.1"
   },
   "description": "prashant's portfolio site",
-  "main": "index.js",
   "devDependencies": {
     "@types/connect-flash": "0.0.37",
     "@types/cors": "^2.8.12",
